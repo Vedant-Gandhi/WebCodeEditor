@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <link rel="icon" href="./Webcodelogo.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Free online texteditor and IDE for Web development"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="HTML,CSS,XML,JavaScript,IDE,BrowserIDE,Webapps,TextEditor,Bestthemeeditor,easyeditor,online html,online css,online js"
+    />
+    <title>WEBCODEEDITOR</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./codemirror/lib/codemirror.css"
+    />
+    <script src="./globalvariables.js"></script>
+
+    <script src="./themesetters.js"></script>
+    <script src="./editorsoptions.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="
+      ./codemirror/addon/scroll/simplescrollbars.css"
+    />
+    <script src="jquery.js"></script>
+    <script src="./popper.js"></script>
+    <script src="./bootstrap-4.5.2/js/bootstrap.min.js"></script>
+
+    <!--This sheet is to load bootstrap css files-->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap-4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./codemirror/addon/hint/show-hint.css"
+    />
+
+    <!--These sheets load the fonts css files-->
+
+    <!--All bootstrap scripts and its dependencies are loaded-->
+
+    <!--Page sheet files are loaded-->
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+  </head>
+
+  <body class="text-light">
+    <!--This code is the title bar-->
+    <div
+      id="titlediv"
+      class="container-fluid d-flex justify-content-between mt-2"
+    >
+      <div class="d-flex align-items-center">
+        <img
+          src="./webide.svg"
+          alt="WebIde Logo"
+          width="45px"
+          height="45px"
+          class="mr-2"
+        />
+        <h3 class="p-0 m-0 text-danger change-primary-font">WEBCODEEDITOR</h3>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <div class="dropdown mr-5 optionresponsiveclass">
+		<!-- TThis code shows the options of the themes button-->
+          <button
+            name="ThemesSelectionbtn"
+            class="btn btn-dark dropdown-toggle p-1 option-responsive-button change-secondary-font"
+            id="themeselectionbtn"
+            data-toggle="dropdown"
+          >
+            Theme
+          </button>
+          <div class="dropdown-menu change-secondary-font" id="thememenu"></div>
+        </div>
+
+        <div class="dropdown optionresponsiveclass change-secondary-font">
+			<!-- This code shows the options of the fonts button-->
+          <button
+            name="SelectFontbtn"
+            class="btn btn-dark dropdown-toggle p-1 option-responsive-button"
+            id="languageSelectionButton"
+            data-toggle="dropdown"
+          >
+            Select Font
+          </button>
+          <div class="dropdown-menu change-secondary-font">
+            <option
+              class="dropdown-item change-secondary-font"
+              value="Default"
+              onclick="changefont(event)"
+            >
+              Default
+            </option>
+
+            <option
+              class="dropdown-item change-secondary-font"
+              value="ComicNue"
+              onclick="changefont(event)"
+            >
+              ComicNue
+            </option>
+
+            <option
+              class="dropdown-item change-secondary-font"
+              value="Roboto"
+              onclick="changefont(event)"
+            >
+              Roboto
+            </option>
+
+            <option
+              class="dropdown-item change-secondary-font"
+              value="Ubuntu"
+              onclick="changefont(event)"
+            >
+              Ubuntu
+            </option>
+            <option
+              class="dropdown-item change-secondary-font"
+              value="PermanentMarker"
+              onclick="changefont(event)"
+            >
+              Permanent Marker
+            </option>
+
+            <option
+              class="dropdown-item change-secondary-font"
+              value="Flamenco"
+              onclick="changefont(event)"
+            >
+              Flamenco
+            </option>
+            <option
+              class="dropdown-item change-secondary-font"
+              value="Lexandapete"
+              onclick="changefont(event)"
+            >
+              Lexanda Pete
+            </option>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-2"></div>
+
+    <!--This code is for the menu bar-->
+
+    <nav class="navbar bg-dark">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li class="">
+            <button id="run-btn" class="btn btn-dark p-0" name="RunButton">
+              <img
+                src="runbtn.svg"
+                alt="Run Button Logo"
+                width="25px"
+                height="25px"
+              />
+            </button>
+            <button
+              id="clear-proj-btn"
+              class="btn btn-dark p-0 ml-3"
+              name="ClearProjectButton"
+            >
+              <img
+                src="./delete-sweep.svg"
+                alt="Clear-Project-Button"
+                width="25px"
+                height="25px"
+              />
+            </button>
+            <button
+              id="download-btn"
+              class="btn btn-dark p-0 ml-3"
+              name="Download-Button"
+            >
+              <img
+                src="./downloadicon.svg"
+                alt="Download icon button"
+                width="25px"
+                height="25px"
+              />
+            </button>
+            <button
+              id="save-btn"
+              class="btn btn-dark p-0 ml-3"
+              name="Save-Button"
+            >
+              <img
+                src="./save.svg"
+                alt="Save button Logo"
+                width="25px"
+                height="25px"
+              />
+            </button>
+          </li>
+        </ul>
+
+        <a
+          href="./help.html"
+          id="helpbtn"
+          class="btn btn-danger ml-auto text-light change-secondary-font"
+          >Help</a
+        >
+      </div>
+    </nav>
+
+    <div class="m-2"></div>
+
+    <!--This code is for the code sections i.e all 3 code windows-->
+    <div>
+      <div class="d-flex justify-content-between">
+        <div class="htmlsection d-flex flex-column codesections">
+          <h4 class="m-0 text-center text-success change-primary-font">HTML</h4>
+          <textarea id="htmlarea" class=""></textarea>
+        </div>
+        <div class="csssection d-flex flex-column codesections">
+          <h4 class="m-0 text-center text-warning change-primary-font">CSS</h4>
+          <textarea id="cssarea" class=""></textarea>
+        </div>
+
+        <div class="jssection d-flex flex-column codesections">
+          <h4 class="m-0 text-center text-info change-primary-font">
+            JAVASCRIPT
+          </h4>
+          <textarea id="jsarea" class=""></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!--This code is for the output window-->
+    <div class="m-3"></div>
+    <div class="border-0">
+      <h4 class="no-display-iframe-title change-primary-font">Output Screen</h4>
+      <iframe
+        title="OutputScreen"
+        id="output-screen"
+        style="
+          height: 400px;
+          width: 100%;
+          overflow: scroll;
+          background-color: #d9d9d9;
+        "
+      ></iframe>
+    </div>
+
+    <script src="./codemirror/lib/codemirror.js"></script>
+
+    <script src="./codemirror/mode/javascript/javascript.js"></script>
+    <script src="./codemirror/mode/xml/xml.js"></script>
+    <script src="./codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="./codemirror/mode/css/css.js"></script>
+    <script src="./codemirror/addon/hint/show-hint.js"></script>
+    <script src="./codemirror/addon/hint/html-hint.js"></script>
+    <script src="./codemirror/addon/hint/xml-hint.js"></script>
+    <script src="./codemirror/addon/hint/css-hint.js"></script>
+    <script src="./codemirror/addon/hint/javascript-hint.js"></script>
+    <script src="./codemirror/addon/scroll/simplescrollbars.js"></script>
+
+    <!--This script  is to load font details-->
+    <script src="./fontload.js"></script>
+    <script src="./index.js"></script>
+	    <!--CSS file for making the code responsive-->
+    <link rel="stylesheet" type="text/css" href="./responsivescreens.css" />
+
+
+  </body>
+</html>

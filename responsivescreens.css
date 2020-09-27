@@ -1,0 +1,45 @@
+@media (max-width: 896px) {
+  .d-flex {
+    flex-direction: column !important;
+  }
+  .codesections {
+    margin-bottom: 5px !important;
+  }
+
+  .no-display-iframe-title {
+    color: var(--red) !important;
+    display: block !important;
+    text-align: center !important;
+  }
+  .option-responsive-button {
+    width: 70% !important;
+    margin-left: 15% !important;
+  }
+  .help-tips {
+    font-size: large !important;
+  }
+
+  .flex-column {
+    width: 100% !important;
+  }
+  body {
+    font-size: large !important;
+  }
+  .optionresponsiveclass {
+    margin: 0px !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+  }
+}
+@media (max-width: 576px) {
+  .option-responsive-button {
+    width: 100% !important;
+    margin: 0px !important;
+  }
+  .change-primary-font {
+    font-size: 16px !important;
+  }
+  .change-secondary-font {
+    font-size: 14px !important;
+  }
+}

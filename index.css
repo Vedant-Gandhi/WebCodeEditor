@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "coderoboto";
+  src: url("./fonts/Roboto/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "codecomicnue";
+  src: url("./fonts/Comic_Neue/ComicNeue-Light.ttf");
+}
+
+@font-face {
+  font-family: "codeubuntu";
+  src: url("./fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: "codepermanentmarker";
+  src: url("./fonts/Permanent_Marker/PermanentMarker-Regular.ttf");
+}
+
+@font-face {
+  font-family: "codeflamenco";
+  src: url("./fonts/Flamenco/Flamenco-Regular.ttf");
+}
+@font-face {
+  font-family: "codelexendapete";
+  src: url("./fonts/Lexend_Peta/LexendPeta-Regular.ttf");
+}
+
+body {
+  --editor-width: 33%;
+  --page-font: "Times New Roman", "Times", "serif";
+  background-color: #171a1c;
+  font-family: var(--page-font);
+}
+.htmlsection {
+  width: var(--editor-width);
+  height: 500px;
+}
+
+.csssection {
+  width: var(--editor-width);
+  height: 500px;
+}
+
+.jssection {
+  width: var(--editor-width);
+  height: 500px;
+}
+.codesections {
+}
+
+.no-display-iframe-title {
+  display: none;
+}
+
+.CodeMirror {
+  font-size: 16px;
+  border-radius: 5px;
+}
