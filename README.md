@@ -42,7 +42,7 @@ This is the navigation helper for the code editor code.
 
 5.themesetter-This file contains the code that will generate the link tag to include the new theme to download it and code to add the theme to browser
 
-
+# Description
 The code is not highly structured and also has a lot of difficulty to read.If you give it some time to understand you can get the meaning of each section of the code.
 This code editor is no more avaliable online as the version 2 has been released online and that contains new code structure written from scratch new functionalities and also new UI
 
